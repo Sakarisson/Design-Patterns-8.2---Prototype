@@ -2,6 +2,6 @@
 
 int main() {
     CoffeeShop coffeeShop;
-    coffeeShop.showMenu();
+    coffeeShop.run();
     return 0;
 }

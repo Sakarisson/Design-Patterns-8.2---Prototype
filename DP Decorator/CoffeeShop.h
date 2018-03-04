@@ -1,22 +1,26 @@
 #pragma once
 
-#include "BasicDrinks.h"
-
 #include <string>
+
+class Drink;
 
 // Test class
 class CoffeeShop {
 public:
-    CoffeeShop() {}
+    CoffeeShop();
     ~CoffeeShop();
 
-    void showMenu();
+    void run();
+
+private:
+    void showDrinkMenu();
     bool addBaseDrink(int);
     bool addToDrink(int);
     int getMenuChoice() const;
     std::string getYesOrNo() const;
 
 private:
-    bool baseDrinkChosen = false;
+    bool _running;
+    bool _orderDone;
     Drink* _drink;
 };
