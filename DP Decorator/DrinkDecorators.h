@@ -50,3 +50,14 @@ public:
 private:
     Drink* _previous;
 };
+
+class SomethingSalty : public Drink {
+public:
+    SomethingSalty(Drink*);
+    ~SomethingSalty() { delete _previous; }
+    std::string getDescription() const override;
+    double getPrice() const override;
+
+private:
+    Drink* _previous;
+};

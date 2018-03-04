@@ -48,3 +48,14 @@ double WhippingCream::getPrice() const {
     return _previous->getPrice() + 5.0;
 }
 
+SomethingSalty::SomethingSalty(Drink* previous) {
+    _previous = previous;
+}
+
+std::string SomethingSalty::getDescription() const {
+    return _previous->getDescription() + " + something salty";
+}
+
+double SomethingSalty::getPrice() const {
+    return _previous->getPrice() + 4.0;
+}
