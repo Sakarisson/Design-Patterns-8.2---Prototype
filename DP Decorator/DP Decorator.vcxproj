@@ -116,10 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BasicDrinks.cpp" />
+    <ClCompile Include="CoffeeShop.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicDrinks.h" />
+    <ClInclude Include="CoffeeShop.h" />
     <ClInclude Include="Drink.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
