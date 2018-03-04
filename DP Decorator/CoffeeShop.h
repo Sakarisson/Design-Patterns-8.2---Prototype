@@ -3,13 +3,12 @@
 #include "BasicDrinks.h"
 
 #include <string>
-#include <memory>
 
 // Test class
 class CoffeeShop {
 public:
     CoffeeShop() {}
-    ~CoffeeShop() {}
+    ~CoffeeShop();
 
     void showMenu();
     bool addBaseDrink(int);
@@ -19,5 +18,5 @@ public:
 
 private:
     bool baseDrinkChosen = false;
-    std::unique_ptr<Drink> _drink;
+    Drink* _drink;
 };

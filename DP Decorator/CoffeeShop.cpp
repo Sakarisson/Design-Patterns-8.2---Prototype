@@ -5,6 +5,10 @@
 using std::cout;
 using std::endl;
 
+CoffeeShop::~CoffeeShop() {
+    delete _drink;
+}
+
 void CoffeeShop::showMenu() {
     cout <<
         "Welcome to Decorator Coffee <3" << endl <<
@@ -49,16 +53,16 @@ void CoffeeShop::showMenu() {
 bool CoffeeShop::addBaseDrink(int choice) {
     switch (choice) {
     case 1:
-        _drink = std::make_unique<Coffee>();
+        _drink = new Coffee();
         break;
     case 2:
-        _drink = std::make_unique<Espresso>();
+        _drink = new Espresso();
         break;
     case 3:
-        _drink = std::make_unique<Tea>();
+        _drink = new Tea();
         break;
     case 4:
-        _drink = std::make_unique<HotChocolate>();
+        _drink = new HotChocolate();
         break;
     default:
         return false;
