@@ -2,8 +2,6 @@
 
 #include "Drink.h"
 
-#include <string>
-
 /*
 Concrete Decorators
 */
