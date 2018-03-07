@@ -2,60 +2,51 @@
 
 #include "Drink.h"
 
+class DrinkDecorator : public Drink {
+public:
+    DrinkDecorator(Drink* previous) { _previous = previous; }
+    virtual ~DrinkDecorator() { delete _previous; }
+
+    std::string getDescription() const override;
+    double getPrice() const override;
+
+protected:
+    std::string _name;
+    double _price;
+
+private:
+    Drink* _previous;
+};
+
 /*
 Concrete Decorators
 */
-class Sugar : public Drink {
+class Sugar : public DrinkDecorator {
 public:
     Sugar(Drink*);
-    ~Sugar() { delete _previous; }
-    std::string getDescription() const override;
-    double getPrice() const override;
-
-private:
-    Drink* _previous;
+    virtual ~Sugar() {}
 };
 
-class Milk : public Drink {
+class Milk : public DrinkDecorator {
 public:
     Milk(Drink*);
-    ~Milk() { delete _previous; }
-    std::string getDescription() const override;
-    double getPrice() const override;
-
-private:
-    Drink* _previous;
+    virtual ~Milk() {}
 };
 
-class Cream : public Drink {
+class Cream : public DrinkDecorator {
 public:
     Cream(Drink*);
-    ~Cream() { delete _previous; }
-    std::string getDescription() const override;
-    double getPrice() const override;
-
-private:
-    Drink* _previous;
+    virtual ~Cream() {}
 };
 
-class WhippingCream : public Drink {
+class WhippingCream : public DrinkDecorator {
 public:
     WhippingCream(Drink*);
-    ~WhippingCream() { delete _previous; }
-    std::string getDescription() const override;
-    double getPrice() const override;
-
-private:
-    Drink* _previous;
+    virtual ~WhippingCream() {}
 };
 
-class SomethingSalty : public Drink {
+class SomethingSalty : public DrinkDecorator {
 public:
     SomethingSalty(Drink*);
-    ~SomethingSalty() { delete _previous; }
-    std::string getDescription() const override;
-    double getPrice() const override;
-
-private:
-    Drink* _previous;
+    virtual ~SomethingSalty() {}
 };

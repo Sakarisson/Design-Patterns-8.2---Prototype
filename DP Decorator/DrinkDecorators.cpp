@@ -1,61 +1,34 @@
 #include "DrinkDecorators.h"
 
-Sugar::Sugar(Drink* previous) {
-    _previous = previous;
+std::string DrinkDecorator::getDescription() const {
+    return _previous->getDescription() + " + " + _name;
 }
 
-std::string Sugar::getDescription() const {
-    return _previous->getDescription() + " + sugar";
+double DrinkDecorator::getPrice() const {
+    return _previous->getPrice() + _price;
 }
 
-double Sugar::getPrice() const {
-    return _previous->getPrice() + 1.0;
+Sugar::Sugar(Drink* previous) : DrinkDecorator(previous) {
+    _name = "sugar";
+    _price = 1.0;
 }
 
-Milk::Milk(Drink* previous) {
-    _previous = previous;
+Milk::Milk(Drink* previous) : DrinkDecorator(previous) {
+    _name = "milk";
+    _price = 1.0;
 }
 
-std::string Milk::getDescription() const {
-    return _previous->getDescription() + " + milk";
+Cream::Cream(Drink* previous) : DrinkDecorator(previous) {
+    _name = "cream";
+    _price = 2.0;
 }
 
-double Milk::getPrice() const {
-    return _previous->getPrice() + 1.0;
+WhippingCream::WhippingCream(Drink* previous) : DrinkDecorator(previous) {
+    _name = "whipping cream";
+    _price = 5.0;
 }
 
-Cream::Cream(Drink* previous) {
-    _previous = previous;
-}
-
-std::string Cream::getDescription() const {
-    return _previous->getDescription() + " + cream";
-}
-
-double Cream::getPrice() const {
-    return _previous->getPrice() + 2.0;
-}
-
-WhippingCream::WhippingCream(Drink* previous) {
-    _previous = previous;
-}
-
-std::string WhippingCream::getDescription() const {
-    return _previous->getDescription() + " + whipping cream";
-}
-
-double WhippingCream::getPrice() const {
-    return _previous->getPrice() + 5.0;
-}
-
-SomethingSalty::SomethingSalty(Drink* previous) {
-    _previous = previous;
-}
-
-std::string SomethingSalty::getDescription() const {
-    return _previous->getDescription() + " + something salty";
-}
-
-double SomethingSalty::getPrice() const {
-    return _previous->getPrice() + 4.0;
+SomethingSalty::SomethingSalty(Drink* previous) : DrinkDecorator(previous) {
+    _name = "something salty";
+    _price = 4.0;
 }

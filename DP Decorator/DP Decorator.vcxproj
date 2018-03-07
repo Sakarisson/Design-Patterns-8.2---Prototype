@@ -125,6 +125,8 @@
     <ClInclude Include="CoffeeShop.h" />
     <ClInclude Include="Drink.h" />
     <ClInclude Include="DrinkDecorators.h" />
+    <ClInclude Include="Mempool.h" />
+    <ClInclude Include="Memstat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
