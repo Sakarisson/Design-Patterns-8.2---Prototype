@@ -18,33 +18,39 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BasicDrinks.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CoffeeShop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DrinkDecorators.cpp">
+    <ClCompile Include="DrinkPrototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecoratorPrototype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrototypeManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Drink.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicDrinks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CoffeeShop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DrinkDecorators.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mempool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Memstat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrinkPrototype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Product.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DecoratorPrototype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrototypeManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

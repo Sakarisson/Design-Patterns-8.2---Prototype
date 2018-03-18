@@ -2,7 +2,7 @@
 
 #include <string>
 
-class Drink;
+class Product;
 
 // Test class
 class CoffeeShop {
@@ -22,5 +22,5 @@ private:
 private:
     bool _running;
     bool _orderDone;
-    Drink* _drink;
+    Product* _drink;
 };

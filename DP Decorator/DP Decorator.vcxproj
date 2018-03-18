@@ -115,18 +115,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BasicDrinks.cpp" />
     <ClCompile Include="CoffeeShop.cpp" />
-    <ClCompile Include="DrinkDecorators.cpp" />
+    <ClCompile Include="DecoratorPrototype.cpp" />
+    <ClCompile Include="DrinkPrototype.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PrototypeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BasicDrinks.h" />
     <ClInclude Include="CoffeeShop.h" />
-    <ClInclude Include="Drink.h" />
-    <ClInclude Include="DrinkDecorators.h" />
+    <ClInclude Include="DrinkPrototype.h" />
+    <ClInclude Include="DecoratorPrototype.h" />
     <ClInclude Include="Mempool.h" />
     <ClInclude Include="Memstat.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="PrototypeManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

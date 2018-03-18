@@ -1,6 +1,5 @@
 #include "CoffeeShop.h"
-#include "BasicDrinks.h"
-#include "DrinkDecorators.h"
+#include "PrototypeManager.h"
 
 #include <iostream>
 
@@ -99,16 +98,20 @@ void CoffeeShop::showDrinkMenu() {
 bool CoffeeShop::addBaseDrink(int choice) {
     switch (choice) {
     case 1:
-        _drink = new Coffee();
+        delete _drink;
+        _drink = PrototypeManager::instance()->getDrink("Coffee");
         break;
     case 2:
-        _drink = new Espresso();
+        delete _drink;
+        _drink = PrototypeManager::instance()->getDrink("Espresso");
         break;
     case 3:
-        _drink = new Tea();
+        delete _drink;
+        _drink = PrototypeManager::instance()->getDrink("Tea");
         break;
     case 4:
-        _drink = new HotChocolate();
+        delete _drink;
+        _drink = PrototypeManager::instance()->getDrink("Hot Chocolate");
         break;
     default:
         return false;
@@ -119,19 +122,19 @@ bool CoffeeShop::addBaseDrink(int choice) {
 bool CoffeeShop::addToDrink(int choice) {
     switch (choice) {
     case 1:
-        _drink = new Sugar(_drink);
+        _drink = PrototypeManager::instance()->getDecorator(_drink, "Sugar");
         break;
     case 2:
-        _drink = new Milk(_drink);
+        _drink = PrototypeManager::instance()->getDecorator(_drink, "Milk");
         break;
     case 3:
-        _drink = new Cream(_drink);
+        _drink = PrototypeManager::instance()->getDecorator(_drink, "Cream");
         break;
     case 4:
-        _drink = new WhippingCream(_drink);
+        _drink = PrototypeManager::instance()->getDecorator(_drink, "Whipping Cream");
         break;
     case 5:
-        _drink = new SomethingSalty(_drink);
+        _drink = PrototypeManager::instance()->getDecorator(_drink, "Something Salty");
         break;
     default:
         return false;
