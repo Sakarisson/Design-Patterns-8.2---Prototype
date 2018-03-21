@@ -9,6 +9,7 @@ public:
     Product* getDrink(std::string);
     Product* getDecorator(Product*, std::string);
 private:
+    PrototypeManager() {}
     static PrototypeManager* _instance;
     DrinkPrototype _drinkPrototype;
     DecoratorPrototype _decoratorPrototype;
